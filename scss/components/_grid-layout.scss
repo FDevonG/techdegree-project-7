@@ -1,0 +1,22 @@
+/************************************************************************
+GRID-LAYOUT
+************************************************************************/
+
+.main-header {
+	grid-area: header;
+}
+
+.sidebar-nav {
+	grid-area: nav;
+}
+
+#page-content-wrapper {
+	grid-area: page-content;
+}
+
+#site-wrapper {
+	display: grid;
+	grid-template-columns: 25px;
+	grid-template-areas: "header header"
+						  "nav page-content";
+}

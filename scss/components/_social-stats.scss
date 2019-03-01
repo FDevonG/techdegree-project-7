@@ -1,0 +1,16 @@
+.social-card {
+	@extend %social-cards;
+	@include border ($width:1px, $side:top);
+}
+
+.social-icon {
+	@extend %social-icons;
+	@include e(svg) {
+		
+		@include m(path) {
+			fill:$white;
+			transform-origin: 50% 50%;
+		}
+		
+	}
+}

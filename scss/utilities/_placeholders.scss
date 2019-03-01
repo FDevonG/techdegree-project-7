@@ -1,0 +1,21 @@
+//************************************************************************
+//PLACEHOLDERS
+//************************************************************************/
+
+%social-cards {
+	background-color: $grey-background;
+	padding: 20px;
+}
+
+%social-icons {
+	min-width:25px;
+	max-width:50px;
+	min-height:25px;
+	max-height:50px;
+	width:25%;
+	height: 25%;
+	float:left;
+	background-color: $primary-color;
+	border-radius: $br-round;
+	margin:10px;
+}

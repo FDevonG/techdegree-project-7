@@ -1,0 +1,47 @@
+/************************************************************************
+HEADER
+************************************************************************/
+
+.main-header {
+	background-color: $primary-color;
+	color: $white;
+	@include flexy($dir: column);
+	align-items: center;
+}
+
+.main-heading {
+//	flex: 1 0 1;
+}
+
+.header-profile-info-wrapper {
+	@include flexy($dir: row);
+	align-items: center;
+}
+
+.notification-wrapper {
+	position: relative;
+	border-right: 1px $black solid;
+}
+
+.notification-bell {
+	width:20px;
+	margin-right: 20px;
+	padding:15px 0;
+}
+
+.green-dot {
+	position: absolute;
+	width:7px;
+	height:7px;
+	background-color: $accent-color;
+	border-radius: $br-round;
+	right:15px;
+	top:10px;
+}
+
+.profile-image {
+	max-width:40px;
+	border-radius: $br-round;
+	margin:0 20px;
+}
+

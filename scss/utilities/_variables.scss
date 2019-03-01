@@ -1,0 +1,28 @@
+//************************************************************************
+//VARIABLES
+//************************************************************************/
+
+//Typography
+$base__font-size : 16px;
+
+
+//COLORS
+$white      : #fff;
+$black      : #666;
+$shipcove   : #7477bf; //header color
+$mulledWine : #4d4c72;  //nav color
+$deYork     : #81C98F; //greencolor
+$alabaster  : #fbfbfb; //grey background color
+$alto       : #d2d2d2; //bordercolor
+
+//COLOR ASSIGNMENT
+$primary-color    : $shipcove;
+$secondary-color  : $mulledWine;
+$accent-color     : $deYork;
+$grey-background  : $alabaster;  
+$border-color     : $alto;
+
+
+//BORDER-RADIUS
+$br-round : 50%;
+$br       : 5%;
