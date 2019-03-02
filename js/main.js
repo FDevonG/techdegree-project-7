@@ -1,11 +1,10 @@
 /*jshint esversion: 6*/
 
-//const Chart = require('chart.js');
-
 const lineCanvas = document.querySelector('#line-canvas').getContext('2d');
 const barCanvas = document.querySelector('#bar-canvas').getContext('2d');
 const circleCanvas = document.querySelector('#circle-canvas').getContext('2d');
 
+const primaryColor = '#7477bf';
 
 const lineChart = new Chart(lineCanvas, {
 	
@@ -18,6 +17,7 @@ const lineChart = new Chart(lineCanvas, {
 				'750',
 				'1000'
 			],
+			backgroundColor:primaryColor,
 		}],
 	},
 	options : {
@@ -25,7 +25,19 @@ const lineChart = new Chart(lineCanvas, {
 			display:true,
 			text: 'TRAFFIC',
 			position : 'top',
-		}
+		},
+		scales: {
+			xAxes: [{
+				gridLines: {
+					offsetGridLines: true,
+				}
+			}]
+		},
+		point : {
+			radius : 20,
+			backgroundColor : '#fff',
+			borderWidth:3,
+		},
 	}
 });
 
@@ -35,7 +47,7 @@ const barChart = new Chart(barCanvas, {
 		labels:['S', 'M', 'T', 'W', 'T', 'F', 'S',],
 		datasets : [{
 			label: 'Daily Vistors',
-			dataset : [
+			data : [
 				'75',
 				'100',
 				'175',
@@ -44,13 +56,22 @@ const barChart = new Chart(barCanvas, {
 				'200',
 				'100',
 			],
-			backgroundColor:'#7477bf',
+			backgroundColor:primaryColor,
 		}],
 	},
+	barThickness : 'flex',
+	
 	options : {
 		title : {
 			display : true,
 			text : 'DAILY TRAFFIC',
+		},
+		scales: {
+			yAxes: [{
+				gridLines: {
+					offsetGridLines: true,
+				}
+			}]
 		},
 		
 	}
