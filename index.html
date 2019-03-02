@@ -4,6 +4,8 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Web App</title>
+		<script src="js/Chart.js"></script>
+		<script data-main="js/main" src="js/require.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 
@@ -67,12 +69,27 @@
 					<div class="alert">
 						<span><strong>Alert</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed mauris in sem laoreet semper finibus sit amet leo.</span><span>X</span>
 					</div>
+					
+					<div class="graphs">
+					
+						<div class="graphs__traffic">
 
-					<div class="traffic">
+							<canvas id="line-canvas"></canvas>
 
-						<h3>Traffic</h3>
-						<canvas id="line-canvas"></canvas>
+						</div>
+						
+						<div class="graphs__traffic">
 
+							<canvas id="bar-canvas"></canvas>
+
+						</div>
+						
+						<div class="graphs__traffic">
+
+							<canvas id="circle-canvas"></canvas>
+
+						</div>
+						
 					</div>
 
 					<div class="social-stats">
@@ -209,7 +226,7 @@
 			</main>
 			
 		</div>
-		<script src="js/main.js"></script>
+<!--		<script src="js/main.js"></script>-->
 	</body>
 	
 </html>
