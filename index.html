@@ -4,8 +4,6 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Web App</title>
-		<script src="js/Chart.js"></script>
-		<script data-main="js/main" src="js/require.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 
@@ -73,20 +71,29 @@
 					<div class="graphs">
 					
 						<div class="graphs__traffic">
-
+							
+							<h4>TRAFFIC</h4>
+							<div class="lineGraphButtons">
+								<button>Hourly</button>
+								<button>Daily</button>
+								<button>Weekly</button>
+								<button>Monthly</button>
+							</div>
 							<canvas id="line-canvas"></canvas>
 
 						</div>
 						
 						<div class="graphs__traffic">
-
+							
+							<h4>DAILY TRAFFIC</h4>
 							<canvas id="bar-canvas"></canvas>
 
 						</div>
 						
 						<div class="graphs__traffic">
 
-							<canvas id="circle-canvas"></canvas>
+							<h4>MOBILE USERS</h4>
+							<canvas id="doughnut-canvas"></canvas>
 
 						</div>
 						
@@ -226,6 +233,8 @@
 			</main>
 			
 		</div>
+		<script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+		<script data-main="js/main" src="node_modules/requirejs/require.js"></script>
 <!--		<script src="js/main.js"></script>-->
 	</body>
 	
