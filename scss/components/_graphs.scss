@@ -1,0 +1,56 @@
+/************************************************************************
+GRAPHS
+************************************************************************/
+
+.graphs {
+	
+	@extend %clearfix;
+
+	@include e(traffic) {
+//		@extend %containers;
+		padding: em(20px);
+		@include mq(small) {
+			&:not(:last-child) {
+				@include border($width : 1px, $side : 'bottom');
+			}
+		}
+		@include mq(medium) {
+			@include border($width : 1px, $side : 'bottom');
+		}
+		
+		@include mq(medium) {
+			&:not(:first-child) {
+				width:50%;
+				float:left;
+			}
+			&:last-child {
+				@include border($width : 1px, $side : 'left');
+			}
+		}
+	}
+	
+}
+
+.graphheader {
+	@include flexy($just : space-between);
+	margin:0;
+	
+	@include e(buttons){
+		
+		@include m(button) {
+			@extend %graph-button;
+		}
+		
+	}	
+	
+}
+
+.selectedGraphButton {
+	background-color: $accent-RBGA-Color;
+}
+
+#line-canvas,
+#bar-canvas,
+#doughnut-canvas {
+	width:100%;
+}

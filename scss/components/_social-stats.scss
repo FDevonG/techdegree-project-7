@@ -1,16 +1,22 @@
+.social-stats {
+	@extend %containers;
+	
+	@include e(container) {
+		@include mq(medium) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-column-gap: em(20px);
+		}
+	}
+}
+
 .social-card {
 	@extend %social-cards;
-	@include border ($width:1px, $side:top);
+	@include border ($width:1px);
+	@include flexy ($just : center);
+	margin:em(20px) 0;
 }
 
 .social-icon {
 	@extend %social-icons;
-	@include e(svg) {
-		
-		@include m(path) {
-			fill:$white;
-			transform-origin: 50% 50%;
-		}
-		
-	}
 }

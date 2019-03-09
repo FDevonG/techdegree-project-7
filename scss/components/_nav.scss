@@ -1,0 +1,35 @@
+/************************************************************************
+NAV
+************************************************************************/
+
+.nav {
+	
+	background-color: $secondary-color;
+	@include flexy();
+	margin:0;
+	@include mq(medium) {
+		flex-direction: column;
+		height:100%;
+	}
+	.current-nav{
+		@include border($width:em(4px), $color : $accent-color, $side : left);
+	} 
+	
+	@include e(item) {
+		@include flex($basis : 25%);
+		text-align: center;
+		&:hover {
+			@include border($width:em(4px), $color : $accent-color, $side : left);
+		}
+		@include mq(medium) { 
+			@include flex($basis : 0);
+			margin-top:em(20px);
+		}
+	}
+	
+}
+
+.nav-icon {
+	max-width:em(20px);
+	margin: em(10px) 0;
+}

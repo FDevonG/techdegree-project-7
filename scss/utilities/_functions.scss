@@ -4,5 +4,5 @@
 
 //unit converter to em
 @function em ($target, $context : $base__font-size) {
-	@return ($target / $context) * 1;
+	@return ($target / $context) * 1em;
 }

@@ -1,0 +1,263 @@
+/************************************************************************
+MEMBERS MASTER CONTAINER
+************************************************************************/
+
+.memebers-section-wrapper {
+	@include mq(large) {
+		display : grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+
+/************************************************************************
+MEMBERS WIDGET
+************************************************************************/
+
+.members {
+	@extend %containers;
+	@include e(list) {
+		@include e(item) {
+			
+			@include flexy($just : space-between);
+			margin : em(20px) 0;
+			padding : em(10px) 0;
+			
+			&:not(:last-child) {
+				@include border ($width : 1px, $side : bottom);
+			}
+			
+			@include m(container-one) {
+				@include flexy();
+			}
+		}
+	}
+}
+
+.user-image {
+	@extend %user-images;
+	margin-right : em(10px);
+}
+
+/************************************************************************
+ACTIVITY WIDGET
+************************************************************************/
+
+.activity {
+	@extend %containers;
+	@include e(list) {
+		
+		@include e(item) {
+			
+			@include flexy($just : space-between);
+			margin : em(20px) 0;
+			padding : em(10px) 0;
+			
+			&:not(:last-child) {
+				@include border ($width : 1px, $side : bottom);
+			}
+			
+			@include m(container-one) {
+				@include flexy();
+			}
+			
+			@include m(container-two) {
+				@include flexy($dir : column);
+			}
+			
+		}
+	}
+}
+
+/************************************************************************
+MESSAGE WIDGET
+************************************************************************/
+
+.message-user {
+	@extend %containers;
+}
+
+.message-form {
+	@include flexy($dir : column);
+	input[type="text"],
+	textarea {
+		background-color: $grey-background;
+	}
+	input[type="submit"] {
+		background-color:$primary-color;
+		@extend %button;
+	}
+	input,
+	textarea {
+		&:focus {
+			outline:none;
+		}
+		margin:em(10px) 0;
+		@include border($width:1px);
+		border-radius : $br;
+		width:100%;
+		&::placeholder {
+			padding-left:em(15px);
+		}
+	}
+	input {
+		height:em(50px);
+	}
+	textarea {
+		height:em(150px);
+	}
+	input[type="submit"]:hover {
+		background-color: $primary-color-t;
+	}
+	
+}
+
+/************************************************************************
+SETTINGS-WIDGET
+************************************************************************/
+
+.settings {
+	
+	@extend %containers;
+	
+	.gt {
+		transform: rotate(90deg);
+		position : absolute;
+		z-index: 10000;
+		right:em(5px);
+	}
+	
+}
+
+.settings-toggle-wrapper {
+	width:75%;
+	@include mq(large) {
+		margin-top:em(75px);
+	}
+}
+
+/*********************
+TOGGLE SWITCHES
+*********************/
+
+.toggle-switch {
+	margin: em(10px) 0;
+	@include flexy($just : space-between);
+	align-items: center;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: em(80px);
+  height: em(34px);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: $default-trans-time;
+  transition: $default-trans-time;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: em(26px);
+  width: em(26px);
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: $default-trans-time;
+  transition: $default-trans-time;
+}
+
+input:checked + .slider {
+  background-color: $primary-color;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(em(40px));
+  -ms-transform: translateX(em(40px));
+  transform: translateX(em(40px));
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: em(34px);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggle-text {
+	position: absolute;
+	left:em(10px);
+	top: em(10px);
+	opacity: 0;
+	transition : opacity $default-trans-time;
+}
+
+.time-zones-wrapper {
+	position : relative;
+	@include border($width : 1px);
+	background-color:$grey-background;
+	border-radius: $br;
+	margin: em(20px) 0;
+	@include mq(large) {
+		margin-top:em(63px);
+	}
+}
+
+#time-zones {
+	padding:em(10px);
+	width:100%;
+	border:none;
+	&:active,
+	&:focus {
+		outline:none;
+	}
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+.setting-button-wrapper {
+	@include flexy($just : space-between);
+	margin: em(20px) 0;
+	button {
+		@include flex($grow : 0, $basis : 45%);
+		border:none;
+		@extend %button;
+	}
+	button:first-child {
+		background-color:$primary-color;
+	}
+	button:first-child:hover {
+		background-color:$primary-color-t;
+	}
+	button:last-child {
+		background-color : $darker-grey-background;
+	}
+	button:last-child:hover {
+		background-color:$grey-background;
+	}
+	
+}
+
+
+

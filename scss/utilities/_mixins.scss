@@ -9,6 +9,12 @@
 	justify-content: $just;
 }
 
+@mixin flex($basis, $grow : 0, $shrink : 0,) {
+	flex-grow: $grow;
+	flex-shrink : $shrink;
+	flex-basis: $basis;
+}
+
 //BEM Selectors
 @mixin e ($element) {
 	&__#{$element} {
@@ -29,5 +35,27 @@
 	} 
 	@else {
 		border : $width $style $color;
+	}
+}
+
+//Media querie
+@mixin mq($break) {
+	@if ($break == "small") {
+		@media (min-width : $small-break) and (max-width : $medium-break) {
+			@content;
+		}
+	} 
+	@else if($break == "medium") {
+		@media (min-width : $medium-break + 1) {
+			@content;
+		}
+	}
+	@else if ($break == "large") {
+		@media (min-width : $large-break) {
+			@content;
+		}
+	}
+	@else {
+		@error "No value could be found for $break";
 	}
 }

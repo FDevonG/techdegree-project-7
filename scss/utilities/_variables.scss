@@ -3,26 +3,46 @@
 //************************************************************************/
 
 //Typography
-$base__font-size : 16px;
+$font-url--google          : "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700";
+$font-family--primary      : 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Sans Serif';
+$base__font-size           : 16px;
+
+$font-weight--light        : 300;
+$font-weight--medium       : 400;
+$font-weight--bold         : 700;
 
 
 //COLORS
-$white      : #fff;
-$black      : #666;
-$shipcove   : #7477bf; //header color
-$mulledWine : #4d4c72;  //nav color
-$deYork     : #81C98F; //greencolor
-$alabaster  : #fbfbfb; //grey background color
-$alto       : #d2d2d2; //bordercolor
+$white         : #fff;
+$black         : #666;
+$shipcove      : #7477bf; //primary color
+$mulledWine    : #4d4c72;  //nav color
+$deYork        : #81C98F; //green accent color
+$gallery       : #eee; //grey background color
+$alto          : #d2d2d2; //bordercolor
+$silverChalice : #b2b2b2;//darker grey background
 
 //COLOR ASSIGNMENT
-$primary-color    : $shipcove;
-$secondary-color  : $mulledWine;
-$accent-color     : $deYork;
-$grey-background  : $alabaster;  
-$border-color     : $alto;
+$primary-color          : $shipcove;
+$secondary-color        : $mulledWine;
+$accent-color           : $deYork;
+$accent-RBGA-Color      : rgba(129, 201, 143, 1);
+$accent-RBGA-Color-t    : rgba(129, 201, 143, 0);
+$grey-background        : $gallery;  
+$border-color           : $alto;
+$primary-color-t        : rgba(116, 119, 191, 0.6);
+$darker-grey-background : $silverChalice;
 
 
 //BORDER-RADIUS
 $br-round : 50%;
-$br       : 5%;
+$br       : 5px;
+
+//MediaQueries
+$small-break  : 1px;
+$medium-break : 768px;
+$large-break  :1024px;
+
+
+//Transition time
+$default-trans-time : 0.5s;

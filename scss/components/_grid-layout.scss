@@ -6,17 +6,26 @@ GRID-LAYOUT
 	grid-area: header;
 }
 
-.sidebar-nav {
+.nav {
 	grid-area: nav;
 }
 
 #page-content-wrapper {
+	margin:0;
 	grid-area: page-content;
 }
 
 #site-wrapper {
 	display: grid;
-	grid-template-columns: 25px;
-	grid-template-areas: "header header"
-						  "nav page-content";
+	grid-template-areas: "header"
+						 "nav"
+						 "page-content";
+	
+	@include mq($break : medium) {
+		grid-template-columns: em(50px);
+		grid-template-areas: "header header"
+						 "nav page-content";
+	}
+	
 }
+

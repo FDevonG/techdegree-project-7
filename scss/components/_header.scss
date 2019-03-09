@@ -5,17 +5,15 @@ HEADER
 .main-header {
 	background-color: $primary-color;
 	color: $white;
-	@include flexy($dir: column);
+	@include flexy($just : space-between);
+	padding: em(20px);
 	align-items: center;
-}
-
-.main-heading {
-//	flex: 1 0 1;
 }
 
 .header-profile-info-wrapper {
 	@include flexy($dir: row);
 	align-items: center;
+	margin-right:em(20px);
 }
 
 .notification-wrapper {
@@ -24,24 +22,56 @@ HEADER
 }
 
 .notification-bell {
-	width:20px;
-	margin-right: 20px;
-	padding:15px 0;
+	width:em(20px);
+	margin-right: em(20px);
+	padding:em(15px) 0;
+	@include mq(large) {
+		width: em(30px)
+	}
+	transition: transform $default-trans-time ease-out;
+	cursor: pointer;
+	&:hover {
+		transform: scale(1.2);
+	}
+	
 }
 
 .green-dot {
 	position: absolute;
-	width:7px;
-	height:7px;
+	width:em(7px);
+	height:em(7px);
 	background-color: $accent-color;
 	border-radius: $br-round;
-	right:15px;
-	top:10px;
+	right:em(15px);
+	top:em(10px);
+	@include mq(large) {
+		width:em(10px);
+		height:em(10px);
+	}
+}
+
+.notification-dropdown-content {
+	opacity: 0;
+	position: absolute;
+	display:block;
+	z-index: 1000;
+	transition: opacity $default-trans-time;
+	width: max-content;
+	text-align: center;
+	background-color: $darker-grey-background;
+	border-radius:$br;
+}
+
+.notification-dropdown-content a {
+	opacity: 1;
+	display:block;
+	padding: em(5px);
+	color: $black;
+	margin:em(10px);
 }
 
 .profile-image {
-	max-width:40px;
-	border-radius: $br-round;
-	margin:0 20px;
+	@extend %user-images;
+	margin:0 em(20px);
 }
 

@@ -1,0 +1,134 @@
+/************************************************************************
+TYPOGRAPHY
+************************************************************************/
+
+@if variable-exists (font-url--google) {
+	@import url($font-url--google);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin:0;
+}
+
+.bold-text {
+	font-weight:$font-weight--bold
+}
+
+.thin-text {
+	font-weight:$font-weight--light;
+}
+
+#site-wrapper {
+	font-size:$base__font-size;
+	font-family: $font-family--primary;
+	color: $black;
+}
+
+.main-heading {
+	font-weight: 100;
+	font-style: normal;
+	font-size: em(16px);
+	@include mq(medium) {
+		font-size: em(22px);
+	}
+}
+
+.user-name {
+	font-size: em(12px);
+}
+
+.second-heading {
+	font-size: em(16px);
+	margin:em(15px) 0;
+}
+
+.alert {
+	font-size : em(12px);
+	color:$white;
+}
+
+.section-heading {
+	font-size: em(14px);
+	margin-bottom: em(10px);
+}
+
+.graphheader__buttons--button {
+	font-size: em(10px);
+	padding: em(10px) em(20px);
+	margin:0;
+	@include mq(large) {
+		font-size : em(14px);
+	} 
+}
+
+.social-text {
+	color: $black;
+}
+
+.social-numbers {
+	font-size:em(40px);
+}
+
+.members {
+	@include e(list) {
+		@include e(item) {			
+			h4 {
+				font-size : em(14px);
+			}
+			a {
+				color : $primary-color;
+			}
+			a,
+			span {
+				font-size : em(12px);
+			}
+		}
+	}
+}
+
+.activity {
+	@include e(list) {
+		span {
+			font-size: em(14px);
+			margin:em(2px) 0;
+		}
+		
+	}
+	
+	.gt {
+		font-size: em(30px);
+	}
+}
+
+.message-form {
+	font-size:em(14px);
+	input[type="submit"] {
+		color:$white;
+	}
+}
+
+.settings {
+	
+	.gt {
+		font-size: em(25px);
+	}
+	
+}
+
+.settings-toggle-wrapper,
+#time-zones {
+	font-size: em(12px);
+}
+
+.setting-button-wrapper,
+.toggle-text {  //toggle switch text inside it
+	font-size: em(14px);
+}
+
+.toggle-text {  //toggle switch text inside it
+	color:$white;
+}
+	

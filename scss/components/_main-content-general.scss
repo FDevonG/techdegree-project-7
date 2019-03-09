@@ -1,0 +1,75 @@
+/************************************************************************
+MAIN-CONTENT-GENERAL
+************************************************************************/
+
+/************************
+TOP SEARCH BAR AND HEADER
+************************/
+.main-content-heading-wrapper {
+	@include flexy($just : space-between);
+}
+
+.top-search {
+	flex-grow: 2;
+	align-items: flex-end;
+	background-color: $grey-background;
+	position : relative;
+	@include flexy($dir : column, $just : center);
+	@include border ($width : 1px, $color : $border-color, $side : 'left');
+	@include border ($width : 1px, $color : $border-color, $side : 'bottom');
+}
+
+#page-search-input {
+	width:em(200px);
+	height: em(30px);
+	margin:0 em(20px);
+	&::placeholder {
+		padding-left:10px;
+	}
+	&:active,
+	&:focus {
+		outline:none;
+	}
+	@include mq(medium) {
+		width: 50%;
+	}
+	
+}
+
+.magnifying-glass-icon {
+	max-width: em(15px);
+	z-index:1000;
+	position: absolute;
+	right:em(30px);
+}
+
+.second-heading {
+	padding: 0 em(10px);
+}
+
+/************************
+ALERT
+************************/
+
+.alert {
+	background-color: $primary-color;
+	border-radius: $br;
+	margin: em(20px);
+	@include flexy();
+	
+	span:first-child {
+		@include flex($grow : 1, $shrink : 0, $basis : 80%);
+	}
+	
+	@include e(span) {
+		padding:em(20px);
+	}
+	
+	@include e(closer) {
+		margin:auto;
+		cursor : pointer;
+	}
+	
+}
+
+
