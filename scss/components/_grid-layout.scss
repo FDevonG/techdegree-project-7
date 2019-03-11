@@ -2,6 +2,10 @@
 GRID-LAYOUT
 ************************************************************************/
 
+#site-wrapper {
+	min-width: $site--min-width;
+}
+
 .main-header {
 	grid-area: header;
 }

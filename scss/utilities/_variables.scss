@@ -2,6 +2,9 @@
 //VARIABLES
 //************************************************************************/
 
+//LAYOUT
+$site--min-width : 320px;
+
 //Typography
 $font-url--google          : "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700";
 $font-family--primary      : 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Sans Serif';
@@ -39,7 +42,7 @@ $br-round : 50%;
 $br       : 5px;
 
 //MediaQueries
-$small-break  : 1px;
+$small-break  : 320px;
 $medium-break : 768px;
 $large-break  :1024px;
 

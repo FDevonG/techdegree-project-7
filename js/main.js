@@ -457,30 +457,29 @@ alertCloser.addEventListener('click', closeAlertNotifications);
 //NOTIFICATION DROPDOWN
 ///////////////////////////////
 
-const body = document.querySelector('body');
-body.addEventListener('click', () => {
+document.addEventListener('click', () => {
 	'use strict';
-	if (dropDownOpen === true) {
-		dropDownMenu.style.opacity = 0;
+	if (dropDownMenu.style.display !== 'none') {
+		dropDownMenu.style.display = 'none';
 	}
-	console.log(1);
 });
 
-const notificationBell = document.querySelector('.notification-wrapper');
+const notificationBell = document.querySelector('.notification-bell');
 const dropDownMenu = document.querySelector('.notification-dropdown-content');
-let dropDownOpen = false;
+
 notificationBell.addEventListener('click', (event) => {
 	'use strict';
-	if (dropDownMenu.style.opacity == 0) {
+	if (dropDownMenu.style.display !== 'block') {
 		event.stopPropagation();
-		dropDownMenu.style.opacity = 1;
-		dropDownOpen = true;
-		console.log(2);
-	} else {
-		dropDownMenu.style.opacity = 0;
-		dropDownOpen = false;
+		dropDownMenu.style.display = 'block';
+	} 
+	else {
+		dropDownMenu.style.display = 'none';
 	}
-	closeAlertNotifications();
+	console.log(dropDownMenu.style.display);
+	if (alertBar.style.display !== 'none' || notificationDot.style.display !== 'none') {
+		closeAlertNotifications();
+	}
 });
 
 function closeAlertNotifications () {

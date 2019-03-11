@@ -253,8 +253,14 @@
 						<div class="message-user">
 							<h3 class="section-heading">Message User</h3>
 							<form method="post" action="index.html" class="message-form">
-								<input type="text" placeholder="Search for User" name="user-search" id="user-search">
-								<textarea placeholder="Message" id="messageBox"></textarea>
+								<input type="text" placeholder="Search for User" name="user-search" id="user-search" list="user-search-complete">
+								<datalist id="user-search-complete">
+									<option value="Victoria Chambers"></option>
+									<option value="Dale Byrd"></option>
+									<option value="Dawn Wood"></option>
+									<option value="Dan Oliver"></option>
+								</datalist>
+								<textarea placeholder="Message for user" id="messageBox"></textarea>
 								<input type="submit" value="Send" id="messageSubmit">
 							</form>
 						</div>
